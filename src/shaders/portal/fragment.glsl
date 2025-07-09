@@ -21,6 +21,8 @@ void main() {
 
     strengh += step(-0.2, strengh) * 0.8;
 
+    // strengh = clamp(strengh, 0.0, 1.0); // this result dont convince me
+
     vec3 color = mix(uColorStart, uColorEnd, strengh);
 
     gl_FragColor = vec4(color, 1.0);
